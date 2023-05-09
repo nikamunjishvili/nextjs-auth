@@ -15,7 +15,17 @@ function NavbarComponent() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-auto" />
         {user ? (
           <Nav.Link
-            style={styles}
+            style={{
+              width: "100px",
+              height: "40px",
+              textAlign: "center",
+              padding: 5,
+              backgroundColor: "darkgrey",
+              borderRadius: "10px",
+              fontSize: 20,
+              cursor: "pointer",
+              color: "#fff",
+            }}
             onClick={() => {
               logout();
               router.push("/login");
@@ -35,15 +45,3 @@ function NavbarComponent() {
 }
 
 export default NavbarComponent;
-
-const styles = {
-  width: "100px",
-  height: "40px",
-  textAlign: "center",
-  padding:5,
-  backgroundColor: "darkgrey",
-  borderRadius: "10px",
-  fontSize:20,
-  cursor: "pointer",
-  color: "#fff",
-};
